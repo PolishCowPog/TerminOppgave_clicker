@@ -3,7 +3,8 @@ extends Node2D
 @onready var show_energy: Label = $Show_Energy
 @onready var show_epc: Label = $Show_EPC
 @onready var show_eps: Label = $Show_EPS
-
+@onready var energy_button: Button = $Energy_button
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var save_path = "user://Energy_Clicker.save"
 
@@ -26,6 +27,7 @@ func _on_button_pressed() -> void:
 
 func _on_energy_button_pressed() -> void:
 	Global.energy += Global.energy_per_click
+	animation_player.play("energy_click_anim")
 	save()
 
 func save():

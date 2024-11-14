@@ -1,6 +1,72 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0ssua4jmjypl"]
+[gd_scene load_steps=15 format=3 uid="uid://b0ssua4jmjypl"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_j1ah7"]
+[ext_resource type="Texture2D" uid="uid://bfy16grai8fdt" path="res://Sprites/Energy.png" id="2_paw7q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w303p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_08hu4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ro1j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_36bot"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ooum5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkku2"]
+
+[sub_resource type="Theme" id="Theme_xwnpj"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_08hu4")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_2ro1j")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_36bot")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_ooum5")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_wkku2")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6vq2y"]
+size = Vector2(1, 150)
+
+[sub_resource type="Animation" id="Animation_hferb"]
+resource_name = "energy_anim"
+length = 5.0
+loop_mode = 2
+
+[sub_resource type="Animation" id="Animation_ts5x3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Energy_button:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(530, 530)]
+}
+
+[sub_resource type="Animation" id="Animation_vv1an"]
+resource_name = "energy_click_anim"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Energy_button:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0501068, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(530, 530), Vector2(550, 550), Vector2(530, 530)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wulgm"]
+_data = {
+"RESET": SubResource("Animation_ts5x3"),
+"energy_anim": SubResource("Animation_hferb"),
+"energy_click_anim": SubResource("Animation_vv1an")
+}
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_j1ah7")
@@ -13,12 +79,18 @@ offset_bottom = 93.0
 text = "Main Menu"
 
 [node name="Energy_button" type="Button" parent="."]
-offset_left = 308.0
-offset_top = 268.0
-offset_right = 838.0
-offset_bottom = 805.0
+offset_left = 272.0
+offset_top = 338.0
+offset_right = 802.0
+offset_bottom = 868.0
+pivot_offset = Vector2(265, 265)
+mouse_default_cursor_shape = 2
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
-text = "(Energy Picture)"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w303p")
+icon = ExtResource("2_paw7q")
+flat = true
+expand_icon = true
 
 [node name="Show_Energy" type="Label" parent="."]
 offset_left = 309.0
@@ -43,6 +115,63 @@ offset_right = 832.0
 offset_bottom = 141.0
 theme_override_font_sizes/font_size = 25
 text = "Energy per second: 0"
+
+[node name="Upgrade_UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Upgrade_UI"]
+layout_mode = 0
+offset_left = 1234.0
+offset_top = 380.0
+offset_right = 1871.0
+offset_bottom = 1042.0
+theme = SubResource("Theme_xwnpj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Upgrade_UI/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_6vq2y")
+
+[node name="TextureRect2" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_6vq2y")
+
+[node name="TextureRect3" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_6vq2y")
+
+[node name="TextureRect4" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_6vq2y")
+
+[node name="TextureRect5" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_6vq2y")
+
+[node name="TextureRect6" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_6vq2y")
+
+[node name="TextureRect7" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_6vq2y")
+
+[node name="TextureRect8" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_6vq2y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wulgm")
+}
+autoplay = "energy_anim"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Energy_button" to="." method="_on_energy_button_pressed"]
