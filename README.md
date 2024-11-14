@@ -1,0 +1,1 @@
+Energy clicker, et clicker spill hvor man skal få strøm ved å trykke og ved å kjøpe generatorer. Går mye lengre inn i space og futuristic maskiner med time travel som ascension. Upgrade tree fra ascension menyen. Ha nettside for å laste ned/direkte spillet spillet (Usikker). Database med savefilen til spilleren 
