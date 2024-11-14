@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmj1wx3jpei68"]
+
+[ext_resource type="Script" path="res://test/save_test.gd" id="1_4obdx"]
+
+[node name="SaveTest" type="Node2D"]
+script = ExtResource("1_4obdx")
+
+[node name="testbuttonplus" type="Button" parent="."]
+offset_left = 942.0
+offset_top = 602.0
+offset_right = 1104.0
+offset_bottom = 748.0
+text = "Plus +"
+
+[node name="testbuttonminus" type="Button" parent="."]
+offset_left = 697.0
+offset_top = 603.0
+offset_right = 862.0
+offset_bottom = 746.0
+text = "Minus -"
+
+[node name="testlabel" type="Label" parent="."]
+offset_left = 838.0
+offset_top = 513.0
+offset_right = 972.0
+offset_bottom = 568.0
+text = "test"
+
+[node name="saveButton" type="Button" parent="."]
+offset_left = 611.0
+offset_top = 414.0
+offset_right = 758.0
+offset_bottom = 527.0
+text = "save"
+
+[node name="loadButton" type="Button" parent="."]
+offset_left = 968.0
+offset_top = 404.0
+offset_right = 1142.0
+offset_bottom = 528.0
+text = "load"
+
+[node name="exit" type="Button" parent="."]
+offset_left = 42.0
+offset_top = 44.0
+offset_right = 241.0
+offset_bottom = 105.0
+text = "Exit"
+
+[connection signal="pressed" from="testbuttonplus" to="." method="_on_testbuttonplus_pressed"]
+[connection signal="pressed" from="testbuttonminus" to="." method="_on_testbuttonminus_pressed"]
+[connection signal="pressed" from="saveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="loadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
