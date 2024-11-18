@@ -1,34 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://b0ssua4jmjypl"]
+[gd_scene load_steps=10 format=3 uid="uid://b0ssua4jmjypl"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_j1ah7"]
 [ext_resource type="Texture2D" uid="uid://bfy16grai8fdt" path="res://Sprites/Energy.png" id="2_paw7q"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w303p"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_08hu4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ro1j"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_36bot"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ooum5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkku2"]
-
 [sub_resource type="Theme" id="Theme_xwnpj"]
-VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_08hu4")
-VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_2ro1j")
-VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_36bot")
-VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_ooum5")
-VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_wkku2")
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6vq2y"]
-size = Vector2(1, 150)
-
-[sub_resource type="Animation" id="Animation_hferb"]
-resource_name = "energy_anim"
-length = 5.0
-loop_mode = 2
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gmgxw"]
+size = Vector2(125, 125)
 
 [sub_resource type="Animation" id="Animation_ts5x3"]
 length = 0.001
@@ -44,6 +24,11 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(530, 530)]
 }
+
+[sub_resource type="Animation" id="Animation_hferb"]
+resource_name = "energy_anim"
+length = 5.0
+loop_mode = 2
 
 [sub_resource type="Animation" id="Animation_vv1an"]
 resource_name = "energy_click_anim"
@@ -135,37 +120,71 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+[node name="Upgrade" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_6vq2y")
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
 
-[node name="TextureRect2" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+[node name="Upgrade2" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_6vq2y")
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
 
-[node name="TextureRect3" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+[node name="Upgrade3" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_6vq2y")
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
 
-[node name="TextureRect4" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+[node name="Upgrade4" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_6vq2y")
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
 
-[node name="TextureRect5" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+[node name="Upgrade5" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_6vq2y")
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
 
-[node name="TextureRect6" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+[node name="Upgrade6" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_6vq2y")
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
 
-[node name="TextureRect7" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+[node name="Upgrade7" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_6vq2y")
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
 
-[node name="TextureRect8" type="TextureRect" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+[node name="Upgrade8" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_6vq2y")
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
+
+[node name="Upgrade9" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
+
+[node name="Upgrade10" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
+
+[node name="Upgrade11" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "YIPPIE"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
