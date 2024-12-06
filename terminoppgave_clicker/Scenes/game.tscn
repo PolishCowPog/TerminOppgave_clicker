@@ -1,7 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0ssua4jmjypl"]
+[gd_scene load_steps=19 format=3 uid="uid://b0ssua4jmjypl"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_j1ah7"]
 [ext_resource type="Texture2D" uid="uid://bfy16grai8fdt" path="res://Sprites/Energy.png" id="2_paw7q"]
+[ext_resource type="Texture2D" uid="uid://dnxokg1muftgv" path="res://Sprites/Click_upgrade.png" id="3_mokit"]
+[ext_resource type="Texture2D" uid="uid://be0bpexevmexc" path="res://Sprites/per_sec_upgrade1.png" id="4_ujsno"]
+[ext_resource type="Texture2D" uid="uid://psuor7bm5fxt" path="res://Sprites/per_sec_upgrade2.png" id="5_06e4h"]
+[ext_resource type="Texture2D" uid="uid://jn5qd0ennnw4" path="res://Sprites/per_sec_upgrade3.png" id="6_eom5k"]
+[ext_resource type="Texture2D" uid="uid://bvko3b28lyae6" path="res://Sprites/per_sec_upgrade4.png" id="7_av858"]
+[ext_resource type="Texture2D" uid="uid://djp6gns7d61fc" path="res://Sprites/per_sec_upgrade5.png" id="8_ymjf7"]
+[ext_resource type="Texture2D" uid="uid://bvb4gudwhb1sc" path="res://Sprites/per_sec_upgrade6.png" id="9_dwh0x"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w303p"]
 
@@ -52,6 +59,12 @@ _data = {
 "energy_anim": SubResource("Animation_hferb"),
 "energy_click_anim": SubResource("Animation_vv1an")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_373ca"]
+bg_color = Color(0.169245, 0.169245, 0.169245, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kx8gu"]
+bg_color = Color(0.168627, 0.168627, 0.168627, 1)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_j1ah7")
@@ -120,71 +133,110 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Upgrade" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+[node name="Click_Upgrade" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+text = "More effecient clicks"
+icon = ExtResource("3_mokit")
+autowrap_mode = 2
 
-[node name="Upgrade2" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+[node name="Per_Sec_upgrade1" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+text = "Crank that thang"
+icon = ExtResource("4_ujsno")
+autowrap_mode = 2
 
 [node name="Upgrade3" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+text = "Bicycle without wheels"
+icon = ExtResource("5_06e4h")
+autowrap_mode = 2
 
 [node name="Upgrade4" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+text = "the SUN is a deadly lazer"
+icon = ExtResource("6_eom5k")
+autowrap_mode = 2
 
 [node name="Upgrade5" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+text = "Turbine of wo' ah"
+icon = ExtResource("7_av858")
+autowrap_mode = 2
 
 [node name="Upgrade6" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+text = "Geothermal heat pump"
+icon = ExtResource("8_ymjf7")
+autowrap_mode = 2
 
 [node name="Upgrade7" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+text = "Biomass converter"
+icon = ExtResource("9_dwh0x")
+autowrap_mode = 2
 
 [node name="Upgrade8" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
+text = "Wave energy converter"
 icon = SubResource("PlaceholderTexture2D_gmgxw")
+autowrap_mode = 2
 
 [node name="Upgrade9" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
+text = "Nuclear reactor"
 icon = SubResource("PlaceholderTexture2D_gmgxw")
+autowrap_mode = 2
 
 [node name="Upgrade10" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
+text = "Fusion reactor"
 icon = SubResource("PlaceholderTexture2D_gmgxw")
+autowrap_mode = 2
 
 [node name="Upgrade11" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "YIPPIE"
+text = "Asteroid Mining Station"
 icon = SubResource("PlaceholderTexture2D_gmgxw")
+autowrap_mode = 2
+
+[node name="Upgrade12" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Dark matter extractor"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
+autowrap_mode = 2
+
+[node name="Upgrade13" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Quantum energy collector"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
+autowrap_mode = 2
+
+[node name="Upgrade14" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Galactic energy nexus"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
+autowrap_mode = 2
+
+[node name="Upgrade15" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Zero-Point Energy Generator"
+icon = SubResource("PlaceholderTexture2D_gmgxw")
+autowrap_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -192,5 +244,38 @@ libraries = {
 }
 autoplay = "energy_anim"
 
+[node name="Upgrade descriptions" type="Node2D" parent="."]
+
+[node name="click_Upgrade_description" type="Label" parent="Upgrade descriptions"]
+visible = false
+offset_left = 770.0
+offset_top = 380.0
+offset_right = 1232.0
+offset_bottom = 623.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_373ca")
+text = "Raises the amount of energy gained per click
+
+Cost: 10 energy"
+autowrap_mode = 2
+
+[node name="Per_sec_upg1_desc" type="Label" parent="Upgrade descriptions"]
+visible = false
+offset_left = 770.0
+offset_top = 380.0
+offset_right = 1232.0
+offset_bottom = 623.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_kx8gu")
+text = "Convert movement into energy with the cranky crank. raises amount of energy gained per second.
+
+cost: 40"
+autowrap_mode = 2
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Energy_button" to="." method="_on_energy_button_pressed"]
+[connection signal="mouse_entered" from="Upgrade_UI/ScrollContainer/VBoxContainer/Click_Upgrade" to="." method="_on_click_upgrade_mouse_entered"]
+[connection signal="mouse_exited" from="Upgrade_UI/ScrollContainer/VBoxContainer/Click_Upgrade" to="." method="_on_click_upgrade_mouse_exited"]
+[connection signal="pressed" from="Upgrade_UI/ScrollContainer/VBoxContainer/Click_Upgrade" to="." method="_on_click_upgrade_pressed"]
+[connection signal="mouse_entered" from="Upgrade_UI/ScrollContainer/VBoxContainer/Per_Sec_upgrade1" to="." method="_on_per_sec_upgrade_1_mouse_entered"]
+[connection signal="mouse_exited" from="Upgrade_UI/ScrollContainer/VBoxContainer/Per_Sec_upgrade1" to="." method="_on_per_sec_upgrade_1_mouse_exited"]

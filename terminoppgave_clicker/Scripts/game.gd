@@ -47,3 +47,27 @@ func load_data():
 		Global.energy = 0
 		Global.energy_per_click = 1
 		Global.energy_per_second = 0
+
+#Upgrades
+@onready var click_upgrade: Button = $Upgrade_UI/ScrollContainer/VBoxContainer/Click_Upgrade
+
+
+
+#Upgrade descriptions
+#Click Upgrade
+@onready var click_upgrade_description: Label = $"Upgrade descriptions/click_Upgrade_description"
+func _on_click_upgrade_mouse_entered() -> void:
+	click_upgrade_description.visible = true
+func _on_click_upgrade_mouse_exited() -> void:
+	click_upgrade_description.visible = false
+func _on_click_upgrade_pressed() -> void:
+	Global.energy_per_click += 1
+	save()
+
+	
+#per secon upgrade 1
+@onready var per_sec_upg_1_desc: Label = $"Upgrade descriptions/Per_sec_upg1_desc"
+func _on_per_sec_upgrade_1_mouse_entered() -> void:
+	per_sec_upg_1_desc.visible = true
+func _on_per_sec_upgrade_1_mouse_exited() -> void:
+	per_sec_upg_1_desc.visible = false
