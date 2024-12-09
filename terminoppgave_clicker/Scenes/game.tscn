@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b0ssua4jmjypl"]
+[gd_scene load_steps=26 format=3 uid="uid://b0ssua4jmjypl"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_j1ah7"]
 [ext_resource type="Texture2D" uid="uid://bfy16grai8fdt" path="res://Sprites/Energy.png" id="2_paw7q"]
@@ -9,13 +9,18 @@
 [ext_resource type="Texture2D" uid="uid://bvko3b28lyae6" path="res://Sprites/per_sec_upgrade4.png" id="7_av858"]
 [ext_resource type="Texture2D" uid="uid://djp6gns7d61fc" path="res://Sprites/per_sec_upgrade5.png" id="8_ymjf7"]
 [ext_resource type="Texture2D" uid="uid://bvb4gudwhb1sc" path="res://Sprites/per_sec_upgrade6.png" id="9_dwh0x"]
+[ext_resource type="Texture2D" uid="uid://bu8axnv7l2mle" path="res://Sprites/per_sec_upgrade7.png" id="10_3wv11"]
+[ext_resource type="Texture2D" uid="uid://dchxsbemt4opm" path="res://Sprites/per_sec_upgrade8.png" id="11_ecu04"]
+[ext_resource type="Texture2D" uid="uid://70evrw180l3g" path="res://Sprites/per_sec_upgrade9.png" id="12_ustnw"]
+[ext_resource type="Texture2D" uid="uid://bmywhh3ib6f30" path="res://Sprites/per_sec_upgrade10.png" id="13_7p44a"]
+[ext_resource type="Texture2D" uid="uid://o7gwoypxelkg" path="res://Sprites/per_sec_upgrade11.png" id="14_j8krh"]
+[ext_resource type="Texture2D" uid="uid://dtpon5svho1sa" path="res://Sprites/per_sec_upgrade12.png" id="15_cyrsi"]
+[ext_resource type="Texture2D" uid="uid://b3buph1ym08nm" path="res://Sprites/per_sec_upgrade13.png" id="16_1u7bi"]
+[ext_resource type="Texture2D" uid="uid://byddxd78lescg" path="res://Sprites/per_sec_upgrade14.png" id="17_30akq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w303p"]
 
 [sub_resource type="Theme" id="Theme_xwnpj"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gmgxw"]
-size = Vector2(125, 125)
 
 [sub_resource type="Animation" id="Animation_ts5x3"]
 length = 0.001
@@ -186,56 +191,56 @@ autowrap_mode = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Wave energy converter"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+icon = ExtResource("10_3wv11")
 autowrap_mode = 2
 
 [node name="Upgrade9" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Nuclear reactor"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+icon = ExtResource("11_ecu04")
 autowrap_mode = 2
 
 [node name="Upgrade10" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Fusion reactor"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+icon = ExtResource("12_ustnw")
 autowrap_mode = 2
 
 [node name="Upgrade11" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Asteroid Mining Station"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+icon = ExtResource("13_7p44a")
 autowrap_mode = 2
 
 [node name="Upgrade12" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Dark matter extractor"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+icon = ExtResource("14_j8krh")
 autowrap_mode = 2
 
 [node name="Upgrade13" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Quantum energy collector"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+icon = ExtResource("15_cyrsi")
 autowrap_mode = 2
 
 [node name="Upgrade14" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Galactic energy nexus"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+icon = ExtResource("16_1u7bi")
 autowrap_mode = 2
 
 [node name="Upgrade15" type="Button" parent="Upgrade_UI/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Zero-Point Energy Generator"
-icon = SubResource("PlaceholderTexture2D_gmgxw")
+icon = ExtResource("17_30akq")
 autowrap_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
